@@ -1,0 +1,5 @@
+-debug
+-main Main
+-hl test.hl
+-lib heaps
+-lib hlsdl
