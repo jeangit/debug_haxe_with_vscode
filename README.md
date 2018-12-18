@@ -19,7 +19,7 @@ In my case, i just created a script called `haxe4` (see below) and put its name 
 ```bash
 #!/bin/sh
 <<<<<<< HEAD
-# $$DATE$$ : mar. 18 décembre 2018 (20:06:10)
+# $$DATE$$ : mar. 18 décembre 2018 (20:08:57)
 =======
 # $$DATE$$ : mar. 18 décembre 2018 (20:04:57)
 >>>>>>> d9d9b77829c495c72427d6a1730b6ff0dcab1f50
@@ -33,11 +33,7 @@ path_to_haxe4="$HOME"/haxelib/haxe4/
 current="$path_to_haxe4"$(readlink $path_to_haxe4/current)
 
 HAXE_STD_PATH="$current"/std "$current"haxe $@
-<<<<<<< HEAD
 ```
-=======
-
->>>>>>> d9d9b77829c495c72427d6a1730b6ff0dcab1f50
 
 ## Building sample provided
 
