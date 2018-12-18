@@ -18,7 +18,7 @@ In my case, i just created a script called `haxe4` (see below) and put its name 
 ## haxe4 sample lauching script
 ```bash
 #!/bin/sh
-# $$DATE$$ : mar. 18 décembre 2018 (19:58:02)
+# $$DATE$$ : mar. 18 décembre 2018 (20:04:57)
 
 #  ~$ ls ~/haxelib/haxe4/ -lh
 #   28  5 oct.  11:29 current -> haxe_20180612063724_1e3e5e0/                             
@@ -29,3 +29,19 @@ path_to_haxe4="$HOME"/haxelib/haxe4/
 current="$path_to_haxe4"$(readlink $path_to_haxe4/current)
 
 HAXE_STD_PATH="$current"/std "$current"haxe $@
+
+
+## Building sample provided
+
+### in a terminal
+`haxe4 make.hxml`
+
+### in Visual Studio Code
+C-S-b , then select _Build_ or _make.hxml_ (same result).
+
+
+## Debugging
+HAHA ! That's the trick!
+
+C-F5 will pop a windows with error message _Failed to connect on debug port_
+
