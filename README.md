@@ -1,8 +1,12 @@
-# Debugging Haxe , using Visual Studio Code
+# Debugging hl Haxe target , using Visual Studio Code
 
 ## .vscode
 
 _launch.json_ and _tasks.json_ are provided in the hidden _.vscode_ directory.
+
+You must have installed Haxe plugins support in VSCode.
+
+That means at least _HashLink Debugger (0.5.1)_ and _Haxe (2.4.5)_ . Or you can just install _Haxe Extension Pack (1.3.0)_.
 
 
 ## Modifying the nadako plugin for multiples haxe installations
@@ -18,11 +22,6 @@ In my case, i've just created a script called `haxe4` (see below).
 ## haxe4 sample lauching script
 ```bash
 #!/bin/sh
-<<<<<<< HEAD
-# $$DATE$$ : mer. 19 décembre 2018 (11:12:54)
-=======
-# $$DATE$$ : mar. 18 décembre 2018 (20:04:57)
->>>>>>> d9d9b77829c495c72427d6a1730b6ff0dcab1f50
 
 #  ~$ ls ~/haxelib/haxe4/ -lh
 #   28  5 oct.  11:29 current -> haxe_20180612063724_1e3e5e0/                             
@@ -46,10 +45,12 @@ C-S-b , then select _Build_ or _make.hxml_ (same result).
 
 ## Debugging
 
-F9 for putting a breakpoint.
-F5 for starting debug. At this step, i get _failed to connect to debug port_.
+**F9** for putting a breakpoint.
+**F5** for starting debug. At this step, i get _failed to connect to debug port_.
 
 But if i launch hl myself, with the debug port equal to the one defined in _launch.js_ :
+
 `hl --debug 6118 --debug-wait test.hl`
-then pressing F5 in VScode will launch the program. Without stopping on breakpoints, alas. It seems that in fact VScode connects and launch, ignoring breakpoints.
+
+then pressing **F5** in VScode will launch the program. Without stopping on breakpoints, alas. It seems that in fact VScode connects and launch, ignoring breakpoints.
 
