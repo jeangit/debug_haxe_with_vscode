@@ -5,21 +5,21 @@
 _launch.json_ and _tasks.json_ are provided in the hidden _.vscode_ directory.
 
 
-## Modifying the nadako plugin for haxe 4
+## Modifying the nadako plugin for multiples haxe installations
 
-In order to use haxe4 on a computer which host also haxe3.x in haxelib, you must edit nadako plugin.
+In order to use haxe4 on a computer which host also haxe3.x in haxelib, you have to go in haxe configuration (_File_/_Preferences_/_Settings_).
 
-package.json must be copied to ~/.vscode-oss/extensions/nadako.vshaxe-2.4.5 .
+Type _haxe._ in the settings filter.
 
-It contains the name of the script for setting environment and calling haxe4.
+Then, go to the _Haxe:Executable_ entry, and edit : just replace `haxe` with the name of your haxe4 alias / launching script. (copy to user setting, and then edit with your value).
 
-In my case, i just created a script called `haxe4` (see below) and put its name in the _package.json_ , in replacement of the `haxe` command.
+In my case, i've just created a script called `haxe4` (see below).
 
 ## haxe4 sample lauching script
 ```bash
 #!/bin/sh
 <<<<<<< HEAD
-# $$DATE$$ : mar. 18 décembre 2018 (20:08:57)
+# $$DATE$$ : mer. 19 décembre 2018 (11:12:54)
 =======
 # $$DATE$$ : mar. 18 décembre 2018 (20:04:57)
 >>>>>>> d9d9b77829c495c72427d6a1730b6ff0dcab1f50
@@ -45,7 +45,11 @@ C-S-b , then select _Build_ or _make.hxml_ (same result).
 
 
 ## Debugging
-HAHA ! That's the trick!
 
-C-F5 will pop a windows with error message _Failed to connect on debug port_
+F9 for putting a breakpoint.
+F5 for starting debug. At this step, i get _failed to connect to debug port_.
+
+But if i launch hl myself, with the debug port equal to the one defined in _launch.js_ :
+`hl --debug 6118 --debug-wait test.hl`
+then pressing F5 in VScode will launch the program. Without stopping on breakpoints, alas. It seems that in fact VScode connects and launch, ignoring breakpoints.
 

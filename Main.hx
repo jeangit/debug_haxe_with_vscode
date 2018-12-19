@@ -31,7 +31,6 @@ class Main extends hxd.App {
   var str:String = "";
 
   public static function main() {
-
     new Main();
   }
 

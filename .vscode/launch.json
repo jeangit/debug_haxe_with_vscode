@@ -15,7 +15,7 @@
         {
             "name": "HashLink (attach)",
             "request": "attach",
-            "port": 6112,
+            "port": 6118,
             "type": "hl",
             "hxml": "make.hxml",
             "cwd": "${workspaceRoot}",
