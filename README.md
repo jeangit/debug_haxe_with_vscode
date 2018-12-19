@@ -4,9 +4,14 @@
 
 _launch.json_ and _tasks.json_ are provided in the hidden _.vscode_ directory.
 
+<<<<<<< HEAD
 You must have installed Haxe plugins support in VSCode.
 
 That means at least _HashLink Debugger (0.5.1)_ and _Haxe (2.4.5)_ . Or you can just install _Haxe Extension Pack (1.3.0)_.
+=======
+You must have installed Haxe support in VSCode.
+
+>>>>>>> 17d62738f48be5983803e9407c865d49ad86c43a
 
 
 ## Modifying the nadako plugin for multiples haxe installations
@@ -22,6 +27,14 @@ In my case, i've just created a script called `haxe4` (see below).
 ## haxe4 sample lauching script
 ```bash
 #!/bin/sh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# $$DATE$$ : mer. 19 décembre 2018 (11:24:40)
+=======
+# $$DATE$$ : mar. 18 décembre 2018 (20:04:57)
+>>>>>>> d9d9b77829c495c72427d6a1730b6ff0dcab1f50
+>>>>>>> 17d62738f48be5983803e9407c865d49ad86c43a
 
 #  ~$ ls ~/haxelib/haxe4/ -lh
 #   28  5 oct.  11:29 current -> haxe_20180612063724_1e3e5e0/                             
